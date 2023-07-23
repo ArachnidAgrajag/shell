@@ -237,8 +237,9 @@ export class Tiler {
             fork.smart_gapped = false;
             let rect = ext.monitor_work_area(fork.monitor);
 
-            rect.x += ext.gap_outer;
-            rect.y += ext.gap_outer;
+            rect.x += ext.gap_outer; //left
+            //rect.y += ext.gap_outer; //top
+            rect.y += 10 * 4 * ext.dpi; //top
             rect.width -= ext.gap_outer * 2;
             rect.height -= ext.gap_outer * 2;
 
@@ -320,7 +321,8 @@ export class Tiler {
             let rect = ext.monitor_work_area(fork.monitor);
 
             rect.x += ext.gap_outer;
-            rect.y += ext.gap_outer;
+            //rect.y += ext.gap_outer; //top
+            rect.y += 10 * 4 * ext.dpi; //top
             rect.width -= ext.gap_outer * 2;
             rect.height -= ext.gap_outer * 2;
 
